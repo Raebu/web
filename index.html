@@ -178,7 +178,7 @@
         <div class="privacy-policy">Privacy Policy</div>
     </footer>
 
-    <div class="cookie-box">
+    <div class="cookie-box" id="cookieBox">
         <h3>This website uses cookies.</h3>
         <p>We use cookies to analyze website traffic and optimize your website experience. By accepting our use of cookies,
             your data will be aggregated with all other user data.</p>
@@ -187,11 +187,19 @@
             <button class="cookie-button accept">Accept</button>
         </div>
     </div>
-    <script>
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        });
-    </script>
+<script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    document.querySelector('.accept').addEventListener('click', function() {
+        document.getElementById('cookieBox').style.display = 'none';
+    });
+
+    document.querySelector('.decline').addEventListener('click', function() {
+        document.getElementById('cookieBox').style.display = 'none';
+    });
+</script>
 
 </body>
 
